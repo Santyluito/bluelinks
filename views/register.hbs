@@ -1,15 +1,18 @@
-<h2 class="text-center my-5">Login de usuario</h2>
+<h2 class="text-center my-5">Regitrar nuevo usuario</h2>
 
 <div class="row justify-content-center">
   <div class="col-md-6">
-    <form action="/auth/login" method="post">
+    <form action="/auth/register" method="post">
       <input type="hidden" name="_csrf" value="{{csrfToken}}">
+      <input type="text" name="userName" class="form-control mb-2" placeholder="Ingrese el nombre" value="blueeweb" />
       <input type="text" name="email" class="form-control mb-2" placeholder="Ingrese el email"
         value="exemplo@example.com" />
       <input type="password" name="password" class="form-control mb-2" placeholder="Ingrese el password"
         value="123123" />
+      <input type="password" name="repassword" class="form-control mb-2" placeholder="Confirme el password"
+        value="123123" />
       <div class="d-grid gap-2">
-        <button class="btn btn-outline-primary">Acceder Usuario</button>
+        <button class="btn btn-outline-success">Registrar Usuario</button>
       </div>
     </form>
   </div>
